@@ -24,7 +24,7 @@ mat ProjPSD(const mat R, const int n, const float eigenTol) {
 }
 
 // [[Rcpp::export]]
-List nearPPD(mat X, const float eigenTol = 1e-06, const float convTol = 1e-07, 
+List nearPPSD(mat X, const float eigenTol = 1e-06, const float convTol = 1e-07, 
              const float psdTol = 1e-08, const int maxit = 100) {
   const int n = X.n_cols;
   const mat X0 = X;
@@ -45,7 +45,7 @@ List nearPPD(mat X, const float eigenTol = 1e-06, const float convTol = 1e-07,
   } while (iter < maxit && (!converged || min(eig_sym(X)) < 0));
   
   if (!converged)
-    warning("'nearPPD' did not converge in %d iterations", iter);
+    warning("'nearPPSD' did not converge in %d iterations", iter);
   return List::create(_["X"] = X, _["iterations"] = iter, _["convergence"] = converged,
                       _["normF"] = norm(X0 - X, "fro"), _["normC"] = norm(X0 - X, "inf"));
 }
