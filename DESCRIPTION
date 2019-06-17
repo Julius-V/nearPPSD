@@ -1,11 +1,14 @@
 Package: nearPPSD
 Type: Package
-Title: What the package does (short line)
+Title: Finding the nearest patterned positive-semidefinite matrix
 Version: 1.0
 Date: 2019-06-18
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Julius Vainora
+Maintainer: Julius Vainora <julius.vainora@gmail.com>
+Description: An implementation of the Alternating Projections Method as to find the nearest
+    patterned positive-semidefinite matrix in the Frobenius norm.
+License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.1)
+Encoding: UTF-8
 LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.0.1
