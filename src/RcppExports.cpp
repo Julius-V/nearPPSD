@@ -5,6 +5,7 @@
 #include <Rcpp.h>
 
 using namespace Rcpp;
+using namespace arma;
 
 // nearPPSD
 List nearPPSD(mat X, const float eigenTol, const float convTol, const float psdTol, const int maxit);
